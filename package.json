@@ -1,6 +1,6 @@
 {
   "name": "express-ticket",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A package for Express that provides user authentication like login, registration, remember me, password reset and email verification.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,6 +21,7 @@
     "i18n": "^0.8.4",
     "express": "^4.17.1"
   },
+  "homepage": "https://github.com/SUKOHI/ExpressTicket",
   "keywords": ["auth"],
   "author": "Sukohi Kuhoh",
   "license": "MIT"
