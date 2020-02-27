@@ -3,7 +3,7 @@
 A package for Express.js that provides user authentication like login, registration, remember me, password reset and email verification.  
 This package is inspired by [Laravel](https://laravel.com/) that is always magical!
 
-[日本語ページはこちら](https://github.com/SUKOHI/ExpressTicket)
+[日本語ページはこちら](https://blog.capilano-fw.com/?p=5975)
 
 # Installation
 
