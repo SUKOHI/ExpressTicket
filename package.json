@@ -1,12 +1,12 @@
 {
   "name": "express-ticket",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A package for Express that provides user authentication like login, registration, remember me, password reset and email verification.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "ticket": "./command"
+    "ticket": "./command.js"
   },
   "main": "express-ticket.js",
   "dependencies": {
