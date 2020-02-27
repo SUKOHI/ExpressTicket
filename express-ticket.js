@@ -57,8 +57,7 @@ class ExpressTicket {
     keys.forEach(key => {
 
       const configPath = this.getPath('config', key);
-      const json = fs.readFileSync(configPath, 'utf8');
-      confgData[key] = JSON.parse(json);
+      confgData[key] = require(configPath);
 
     });
     return confgData;

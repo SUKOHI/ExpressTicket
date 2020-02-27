@@ -6,7 +6,7 @@ module.exports = {
   config: {
     src: PACKAGE_PATH +'/config',
     dest: ROOT_PATH +'/config',
-    extension: '.json'
+    extension: '.js'
   },
   migrations: {
     src: PACKAGE_PATH +'/migrations',
