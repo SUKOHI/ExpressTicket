@@ -1,0 +1,33 @@
+{
+	"validation": {
+		"required": "This field is required.",
+		"email": "This must be a valid email address.",
+		"max": "This may not be greater than %d characters.",
+		"min": "This must be at least %d characters.",
+		"exists": "We can't find a record.",
+		"confirm": "The confirmation does not match."
+	},
+  "message": {
+    "register": {
+      "email": {
+        "subject": "Email verification",
+        "text": "Please click the following link to verify your email address.",
+        "sent": "We successfully sent a verification link."
+      },
+			"error": {
+				"signature": "Invalid signature."
+			}
+    },
+		"passwordReset": {
+			"email": {
+        "subject": "Reset password",
+        "text": "Please click the following link to reset your password.",
+        "sent": "We have e-mailed your password reset link!"
+      },
+			"completed": "Your password has been reset!",
+			"error": {
+				"invalidToken": "This password reset token is invalid."
+			}
+		}
+  }
+}

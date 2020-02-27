@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="bg-white shadow-sm px-4 py-3">
+        <div class="container">
+            <a class="text-secondary" href="/">Express Ticket</a>
+            {{ #user }}
+                <div class="float-right">
+                    <a class="text-secondary" href="/logout">Logout</a>
+                </div>
+            {{ /user }}
+        </div>
+    </div>
+    <div class="mt-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Dashboard</div>
+                        <div class="card-body">
+                            {{ #message.success }}
+                                <div role="alert" class="alert alert-success">{{ message.success }}</div>
+                            {{ /message.success }}
+                            {{ #user }}
+                                {{ #ticket.options.verify }}
+                                {{ ^user.emailVerifiedAt }}
+                                <div class="alert alert-danger">
+                                    <div class="float-right">
+                                        <a href="/email/resend">Resend</a>
+                                    </div>
+                                    Please verify your email.
+                                </div>
+                                {{ /user.emailVerifiedAt }}
+                                {{ /ticket.options.verify }}
+                                <strong>You are logged in!</strong><br><br>
+                                ID: {{ id }}<br>
+                                Name: {{ name }}<br>
+                                E-Mail: {{ email }}<br><br>
+                                etc ...
+                            {{ /user }}
+                            {{ ^user }}
+                                Please <a href="/login">login</a>.
+                            {{ /user }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

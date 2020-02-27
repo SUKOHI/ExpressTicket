@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="bg-white shadow-sm px-4 py-3">
+        <div class="container">
+            <a class="text-secondary" href="/">Express Ticket</a>
+            <div class="float-right">
+                <a class="text-secondary" href="/login">Login</a>&nbsp;
+                <a class="text-secondary" href="/register">Register</a>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Register</div>
+                    <div class="card-body">
+                      {{ #message.success }}
+                      <div role="alert" class="alert alert-success">{{ message.success }}</div>
+                      {{ /message.success }}
+                        <form method="POST" action="/register">
+                            {{{ csrfField }}}
+                            <div class="form-group row">
+                                <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
+                                <div class="col-md-6">
+                                    <input type="text" name="name" class="form-control" value="{{ data.name }}">
+                                    {{ #errors.name.length }}
+                                    <div class="alert alert-danger">
+                                      {{ #errors.name }}
+                                      <div>{{ message }}</div>
+                                      {{ /errors.name }}
+                                    </div>
+                                    {{ /errors.name.length }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail</label>
+                                <div class="col-md-6">
+                                    <input type="email" name="email" class="form-control" value="{{ data.email }}">
+                                    {{ #errors.email.length }}
+                                    <div class="alert alert-danger">
+                                      {{ #errors.email }}
+                                      <div>{{ message }}</div>
+                                      {{ /errors.email }}
+                                    </div>
+                                    {{ /errors.email.length }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                                <div class="col-md-6">
+                                    <input type="password" name="password" class="form-control">
+                                    {{ #errors.password.length }}
+                                    <div class="alert alert-danger">
+                                      {{ #errors.password }}
+                                      <div>{{ message }}</div>
+                                      {{ /errors.password }}
+                                    </div>
+                                    {{ /errors.password.length }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Confirm password</label>
+                                <div class="col-md-6">
+                                    <input type="password" name="passwordConfirmation" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0">
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="submit" class="btn btn-primary">Register</button>
+                                </div>
+                            </div>
+                        </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>
